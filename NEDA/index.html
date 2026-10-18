@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Galaxia 💫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Reproductor de música de fondo -->
+<audio id="music" loop preload="auto">
+  <source src="audio/cancion3.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio 😢
+</audio>
+
+
+<!-- Controles de música flotantes -->
+<div class="music-controls">
+
+  <!-- Botón Anterior -->
+  <button id="prev-btn" aria-label="Canción anterior" title="Anterior">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <path fill="currentColor" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+    </svg>
+  </button>    
+
+<!-- Botón play -->
+  <button id="music-btn" aria-label="Reproducir música" title="Música">
+    <svg class="icon-play" viewBox="0 0 24 24" width="22" height="22">
+      <path fill="currentColor" d="M8 5v14l11-7z"/>
+    </svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" width="22" height="22" style="display:none">
+      <path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/>
+    </svg>
+  </button>
+  
+  <!-- Botón de Siguiente Canción -->
+  <button id="next-btn" aria-label="Siguiente canción" title="Siguiente canción">
+    <svg viewBox="0 0 24 24" width="22" height="22">
+      <path fill="currentColor" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+    </svg>
+  </button>
+</div>
+
+
+  <!-- Canvas: donde dibujaremos las estrellas con JS -->
+  <canvas id="galaxy"></canvas>
+
+  <!-- Hero: la primera pantalla -->
+  <header class="hero">
+    <div class="moon"></div>
+    <h1 class="glow">Nuestra Galaxia</h1>
+    <p class="subtitle">Un universo entero que empezó contigo Neda❤️</p>
+    <div class="scroll-hint">⤓</div>
+  </header>
+
+  <!-- Historia -->
+  <section class="reveal">
+    <h2>Nuestra Historia</h2>
+    <p class="story">
+      Antes de ti, el cielo estaba oscuro.<br>
+      Llegaste y encendiste cada estrella.<br>
+      Ahora cada noche me recuerda que eres<br>
+      <span class="highlight">mi constelación favorita</span>.
+    </p>
+  </section>
+
+  <!-- Contador -->
+  <section class="reveal">
+    <h2>Brillando Juntos Desde</h2>
+    <div class="counter" id="counter">
+      <div class="stat"><span id="days" class="num">0</span><small>días</small></div>
+      <div class="stat"><span id="hours" class="num">0</span><small>horas</small></div>
+      <div class="stat"><span id="mins" class="num">0</span><small>min</small></div>
+      <div class="stat"><span id="secs" class="num">0</span><small>seg</small></div>
+    </div>
+  </section>
+
+  <!-- Constelación de momentos -->
+  <section class="reveal">
+    <h2>Momentos que Brillan</h2>
+        <div class="constellation">
+      <article class="star-card">
+        <img src="img/foto1.jpg" alt="Nuestro primer momento">
+        <h3>El primer día</h3>
+        <p>Cuando todo empezó.</p>
+      </article>
+      <article class="star-card">
+        <img src="img/foto2.jpg" alt="Una aventura juntos">
+        <h3>Nuestra aventura</h3>
+        <p>Risas que no olvidaré.</p>
+      </article>
+      <article class="star-card">
+        <img src="img/foto3.jpg" alt="Nuestro futuro">
+        <h3>El futuro</h3>
+        <p>Todo lo que nos queda.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>Creado con código y con ❤️ para ti.</p>
+  </footer>
+
+     <!-- Modal para ampliar fotos -->
+  <div id="image-modal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Foto ampliada">
+  </div>
+
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
